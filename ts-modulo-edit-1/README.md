@@ -64,7 +64,7 @@ Typescript initiation
 - Introducing utility types: Pick and Omit.
 - Discussing common patterns in React applications with TypeScript.
 
-**Exercises:**
+**Exercises:*
 21. Create a React functional component that accepts props with a typed interface.
 22. Use the useState hook with a typed state variable.
 23. Create a component that receives a callback function as a prop and types it.
