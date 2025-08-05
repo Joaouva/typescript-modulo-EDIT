@@ -1,19 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Use type assertion to treat a variable as a different type.";
-const solution =
-	"let someValue: any = 'abc'; let strLength: number = (someValue as string).length;";
+const description = "Crie um tipo para um carro com propriedades readonly.";
+const solution = `interface Carro { readonly marca: string; readonly modelo: string; ano: number; }`;
 
 const Exercise17: React.FC = () => {
-	let someValue: any = "abc";
-	let strLength: number = (someValue as string).length;
-	return (
-		<Exercise title="Exercise 17" description={description} solution={solution}>
-			Length is {strLength}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 17" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 17 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise17;

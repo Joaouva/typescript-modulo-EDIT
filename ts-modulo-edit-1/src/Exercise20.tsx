@@ -1,18 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Use Record to create a type with keys of string and values of number.";
-const solution =
-	"let scores: Record<string, number> = { math: 90, english: 80 };";
+const description = "Escreva uma função que retorna um objeto com métodos encadeáveis.";
+const solution = `const calculator = { value: 0, add(n: number) { this.value += n; return this; }, multiply(n: number) { this.value *= n; return this; } };`;
 
 const Exercise20: React.FC = () => {
-	let scores: Record<string, number> = { math: 90, english: 80 };
-	return (
-		<Exercise title="Exercise 20" description={description} solution={solution}>
-			Math = {scores.math}, English = {scores.english}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 20" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 20 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise20;

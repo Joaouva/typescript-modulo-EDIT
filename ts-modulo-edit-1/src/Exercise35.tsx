@@ -1,22 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Create a TypeScript 2025 function using arrow function syntax that can accept either a string or an array of strings and returns the length using union types";
-const solution =
-	"const getLength = (value: string | string[]): number => value.length;";
+const description = "Crie um tipo para um jogo com estado e métodos para manipular o estado.";
+const solution = `interface Jogo { estado: 'iniciado' | 'pausado' | 'terminado'; pontuacao: number; iniciar: () => void; pausar: () => void; terminar: () => void; }`;
 
 const Exercise35: React.FC = () => {
-	const getLength = (value: string | string[]): number => value.length;
-
-	const stringLength = getLength("hello");
-	const arrayLength = getLength(["apple", "banana", "cherry"]);
-
-	return (
-		<Exercise title="Exercise 35" description={description} solution={solution}>
-			String length: {stringLength}, Array length: {arrayLength}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 35" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 35 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise35;

@@ -1,27 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Create a TypeScript 2025 function using arrow function syntax that accepts an 'unknown' type and safely checks if it's a string before using it";
-const solution =
-	"const processValue = (value: unknown): string => { if (typeof value === 'string') { return value; } return 'not a string'; };";
+const description = "Escreva uma função que aceita um objeto e retorna uma versão com propriedades readonly.";
+const solution = `function makeReadonly<T>(obj: T): Readonly<T> { return Object.freeze({ ...obj }); }`;
 
 const Exercise40: React.FC = () => {
-	const processValue = (value: unknown): string => {
-		if (typeof value === "string") {
-			return value;
-		}
-		return "not a string";
-	};
-
-	const result1 = processValue("hello");
-	const result2 = processValue(123);
-
-	return (
-		<Exercise title="Exercise 40" description={description} solution={solution}>
-			Processed 'hello': {result1}, Processed 123: {result2}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 40" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 40 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise40;

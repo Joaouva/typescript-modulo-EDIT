@@ -1,20 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Create a React functional component that accepts props with a typed interface.";
-const solution = `interface GreetingProps { name: string; }\nconst Greeting: React.FC<GreetingProps> = ({ name }) => <div>Hello, {name}</div>;`;
-
-const Greeting: React.FC<{ name: string }> = ({ name }) => (
-	<div>Hello, {name}</div>
-);
+const description = "Crie um tipo para um formulário com validação de campos obrigatórios.";
+const solution = `interface Formulario { nome: string; email: string; telefone?: string; }`;
 
 const Exercise21: React.FC = () => {
-	return (
-		<Exercise title="Exercise 21" description={description} solution={solution}>
-			<Greeting name="Student" />
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 21" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 21 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise21;

@@ -1,30 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Create a TypeScript 2025 interface for a configuration object with satisfies operator and readonly properties";
-const solution =
-	"interface Config { readonly apiUrl: string; readonly timeout: number; debug: boolean; } const config = { apiUrl: 'https://api.example.com', timeout: 5000, debug: true } satisfies Config;";
+const description = "Escreva uma função que aceita uma função e retorna uma versão memoizada.";
+const solution = `function memoize<T extends (...args: any[]) => any>(fn: T): T { const cache = new Map(); return ((...args: any[]) => { const key = JSON.stringify(args); if (cache.has(key)) return cache.get(key); const result = fn(...args); cache.set(key, result); return result; }) as T; }`;
 
 const Exercise34: React.FC = () => {
-	interface Config {
-		readonly apiUrl: string;
-		readonly timeout: number;
-		debug: boolean;
-	}
-
-	const config = {
-		apiUrl: "https://api.example.com",
-		timeout: 5000,
-		debug: true,
-	} satisfies Config;
-
-	return (
-		<Exercise title="Exercise 34" description={description} solution={solution}>
-			Config: {config.apiUrl} - Timeout: {config.timeout}ms - Debug:{" "}
-			{config.debug ? "On" : "Off"}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 34" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 34 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise34;

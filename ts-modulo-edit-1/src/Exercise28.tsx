@@ -1,17 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Convert this JavaScript function to TypeScript 2025 with arrow function and explicit return type: 'function add(a, b) { return a + b; }'";
-const solution = "const add = (a: number, b: number): number => a + b;";
+const description = "Escreva uma função que aceita uma condição e retorna uma função que filtra arrays.";
+const solution = `function createFilter<T>(predicate: (item: T) => boolean) { return (arr: T[]) => arr.filter(predicate); }`;
 
 const Exercise28: React.FC = () => {
-	const add = (a: number, b: number): number => a + b;
-	return (
-		<Exercise title="Exercise 28" description={description} solution={solution}>
-			Add function result: {add(5, 3)}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 28" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 28 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise28;

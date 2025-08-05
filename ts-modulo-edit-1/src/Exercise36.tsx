@@ -1,24 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Create a TypeScript 2025 const enum called 'Status' with values 'Pending', 'Approved', and 'Rejected' for better performance";
-const solution =
-	"const enum Status { Pending = 'PENDING', Approved = 'APPROVED', Rejected = 'REJECTED' }";
+const description = "Escreva uma função que aceita um objeto e retorna uma versão com propriedades opcionais.";
+const solution = `function makeOptional<T>(obj: T): Partial<T> { return obj; }`;
 
 const Exercise36: React.FC = () => {
-	const enum Status {
-		Pending = "PENDING",
-		Approved = "APPROVED",
-		Rejected = "REJECTED",
-	}
-
-	const currentStatus: Status = Status.Pending;
-	return (
-		<Exercise title="Exercise 36" description={description} solution={solution}>
-			Current Status: {currentStatus}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 36" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 36 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise36;

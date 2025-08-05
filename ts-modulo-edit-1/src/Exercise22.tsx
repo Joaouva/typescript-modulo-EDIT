@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description = "Use the useState hook with a typed state variable.";
-const solution = `const [count, setCount] = useState<number>(0);`;
+const description = "Escreva uma função que aceita um array e uma função de transformação.";
+const solution = `function transformArray<T, U>(arr: T[], transform: (item: T) => U): U[] { return arr.map(transform); }`;
 
 const Exercise22: React.FC = () => {
-	const [count, setCount] = useState<number>(0);
-	return (
-		<Exercise title="Exercise 22" description={description} solution={solution}>
-			<button onClick={() => setCount(count + 1)}>Increment</button> Count:{" "}
-			{count}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 22" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 22 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise22;

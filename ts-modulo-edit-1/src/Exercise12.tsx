@@ -1,21 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description = "Create an enum for colors.";
-const solution = "enum Color { Red, Green, Blue }";
+const description = "Escreva uma função que aceita um número variável de argumentos usando rest parameters.";
+const solution = `function sum(...numbers: number[]): number { return numbers.reduce((sum, num) => sum + num, 0); }`;
 
 const Exercise12: React.FC = () => {
-	enum Color {
-		Red,
-		Green,
-		Blue,
-	}
-	const favorite: Color = Color.Green;
-	return (
-		<Exercise title="Exercise 12" description={description} solution={solution}>
-			Favorite color index is {favorite}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 12" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 12 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise12;

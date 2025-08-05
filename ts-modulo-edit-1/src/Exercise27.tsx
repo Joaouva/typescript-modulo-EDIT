@@ -1,17 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Convert this JavaScript array to TypeScript 2025 with satisfies operator: 'let numbers = [1, 2, 3, 4, 5]'";
-const solution = "const numbers = [1, 2, 3, 4, 5] satisfies number[];";
+const description = "Crie um tipo para um utilizador com métodos para atualizar informações.";
+const solution = `interface Utilizador { nome: string; email: string; atualizarNome: (nome: string) => void; atualizarEmail: (email: string) => void; }`;
 
 const Exercise27: React.FC = () => {
-	const numbers = [1, 2, 3, 4, 5] satisfies number[];
-	return (
-		<Exercise title="Exercise 27" description={description} solution={solution}>
-			Numbers: {numbers.join(", ")}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 27" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 27 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise27;

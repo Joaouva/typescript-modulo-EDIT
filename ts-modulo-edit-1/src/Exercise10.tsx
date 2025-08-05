@@ -1,21 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description = "Object with method.";
-const solution =
-	"const calculator = { sum(a: number, b: number) { return a + b; } };";
+const description = "Crie um objeto com um método que soma dois números.";
+const solution = `const calculator = { add: (a: number, b: number) => a + b };`;
 
 const Exercise10: React.FC = () => {
-	const calculator = {
-		sum(a: number, b: number) {
-			return a + b;
-		},
-	};
-	return (
-		<Exercise title="Exercise 10" description={description} solution={solution}>
-			4 + 6 = {calculator.sum(4, 6)}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 10" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 10 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise10;

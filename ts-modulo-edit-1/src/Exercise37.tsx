@@ -1,24 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Create a TypeScript 2025 generic function called 'firstElement' using arrow function syntax and satisfies operator for type safety";
-const solution =
-	"const firstElement = <T,>(arr: T[]): T | undefined => arr[0];";
+const description = "Crie um objeto com métodos que implementam um sistema de eventos.";
+const solution = `const eventEmitter = { listeners: new Map(), on: (event: string, callback: Function) => { if (!eventEmitter.listeners.has(event)) eventEmitter.listeners.set(event, []); eventEmitter.listeners.get(event).push(callback); }, emit: (event: string, data: any) => { const callbacks = eventEmitter.listeners.get(event) || []; callbacks.forEach(callback => callback(data)); } };`;
 
 const Exercise37: React.FC = () => {
-	const firstElement = <T,>(arr: T[]): T | undefined => arr[0];
-
-	const numbers = [1, 2, 3, 4, 5] satisfies number[];
-	const strings = ["apple", "banana", "cherry"] satisfies string[];
-	const firstNumber = firstElement(numbers);
-	const firstString = firstElement(strings);
-
-	return (
-		<Exercise title="Exercise 37" description={description} solution={solution}>
-			First number: {firstNumber}, First string: {firstString}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 37" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 37 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise37;

@@ -1,17 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Convert this JavaScript variable declaration to TypeScript 2025 with explicit typing and const assertion: 'let name = \"John\"'";
-const solution = 'const name: string = "John" as const;';
+const description = "Escreva uma função que aceita um número e retorna uma função que multiplica por esse número.";
+const solution = `function createMultiplier(factor: number) { return (num: number) => num * factor; }`;
 
 const Exercise26: React.FC = () => {
-	const name: string = "John" as const;
-	return (
-		<Exercise title="Exercise 26" description={description} solution={solution}>
-			Name is: {name}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 26" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 26 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise26;

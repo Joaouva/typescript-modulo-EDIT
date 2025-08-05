@@ -1,19 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description = "Function with optional parameter.";
-const solution =
-	"function greet(name?: string) { return name ? `Hello, ${name}` : 'Hello'; }";
+const description = "Escreva uma função com um parâmetro opcional.";
+const solution = "function greet(name?: string): string { return \`Hello ${name || 'World'}\`; }";
 
 const Exercise8: React.FC = () => {
-	function greet(name?: string) {
-		return name ? `Hello, ${name}` : "Hello";
-	}
-	return (
-		<Exercise title="Exercise 8" description={description} solution={solution}>
-			{greet()} / {greet("Sam")}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 8" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 8 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise8;

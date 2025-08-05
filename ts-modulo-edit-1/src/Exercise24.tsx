@@ -1,19 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Use the Pick utility type to select specific properties from a type.";
-const solution = `type User = { id: number; name: string; email: string };\ntype UserPreview = Pick<User, 'id' | 'name'>;`;
+const description = "Escreva uma função que aceita parâmetros nomeados usando um objeto.";
+const solution = `function createUser({ nome, email, idade }: { nome: string; email: string; idade: number }) { return { nome, email, idade }; }`;
 
 const Exercise24: React.FC = () => {
-	type User = { id: number; name: string; email: string };
-	type UserPreview = Pick<User, "id" | "name">;
-	const user: UserPreview = { id: 1, name: "Alice" };
-	return (
-		<Exercise title="Exercise 24" description={description} solution={solution}>
-			User Preview: {user.id}, {user.name}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 24" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 24 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise24;

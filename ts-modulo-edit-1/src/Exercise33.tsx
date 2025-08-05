@@ -1,18 +1,21 @@
 import React from "react";
 import Exercise from "./Exercise";
+import { Box, Typography } from "@mui/material";
 
-const description =
-	"Create a variable using TypeScript 2025 literal types that can only have the values 'red', 'green', or 'blue' with const assertion";
-const solution =
-	"const color = 'red' as const satisfies 'red' | 'green' | 'blue';";
+const description = "Crie um objeto com métodos que implementam um sistema de cache.";
+const solution = `const cache = { data: new Map(), get: (key: string) => cache.data.get(key), set: (key: string, value: any) => cache.data.set(key, value), clear: () => cache.data.clear() };`;
 
 const Exercise33: React.FC = () => {
-	const color = "red" as const satisfies "red" | "green" | "blue";
-	return (
-		<Exercise title="Exercise 33" description={description} solution={solution}>
-			Color: {color}
-		</Exercise>
-	);
+  // Implementation will be added manually
+  return (
+    <Exercise title="Exercise 33" description={description} solution={solution}>
+      <Box>
+        <Typography variant="body1">
+          Exercise 33 implementation
+        </Typography>
+      </Box>
+    </Exercise>
+  );
 };
 
 export default Exercise33;
